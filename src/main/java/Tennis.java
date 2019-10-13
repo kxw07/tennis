@@ -29,6 +29,10 @@ public class Tennis {
                     return "B Advantage";
                 }
             }
+
+            if (a > 3) {
+                return "A Wins";
+            }
             return scoreLookUp(a) + " " + scoreLookUp(b);
         }
     }
