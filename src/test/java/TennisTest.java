@@ -86,6 +86,14 @@ public class TennisTest {
         Assert.assertEquals("B Advantage", tennis.score());
     }
 
+    @Test
+    public void when_a_score_five_times_b_score_three_times_then_a_win() {
+        aScoreMultiTimes(5);
+        bScoreMultiTimes(3);
+        Assert.assertEquals("A Wins", tennis.score());
+    }
+
+
     public void aScoreMultiTimes(int times) {
         for (int idx = 0; idx < times; idx++) {
             tennis.aScore();
