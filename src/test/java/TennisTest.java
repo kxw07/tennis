@@ -100,6 +100,20 @@ public class TennisTest {
         Assert.assertEquals("B Wins", tennis.score());
     }
 
+    @Test
+    public void when_a_score_two_times_b_score_one_times_then_thirty_fifteen() {
+        aScoreMultiTimes(2);
+        bScoreMultiTimes(1);
+        Assert.assertEquals("Thirty Fifteen", tennis.score());
+    }
+
+    @Test
+    public void when_score_three_times_b_score_one_times_then_Forty_fifteen() {
+        aScoreMultiTimes(3);
+        bScoreMultiTimes(1);
+        Assert.assertEquals("Forty Fifteen", tennis.score());
+    }
+
 
     public void aScoreMultiTimes(int times) {
         for (int idx = 0; idx < times; idx++) {
