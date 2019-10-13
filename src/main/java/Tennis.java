@@ -3,10 +3,15 @@ import java.util.Map;
 
 public class Tennis {
     int a = 0;
+    int b = 0;
 
     public String score() {
         if (a > 0) {
             return scoreLookUp(a) + " Love";
+        }
+
+        if (b > 0) {
+            return "Love " + scoreLookUp(b);
         }
 
         return "Love All";
@@ -14,6 +19,10 @@ public class Tennis {
 
     public void aScore() {
         a++;
+    }
+
+    public void bScore() {
+        b++;
     }
 
     public String scoreLookUp(int score) {
@@ -25,4 +34,5 @@ public class Tennis {
 
         return scoreMap.get(score);
     }
+
 }
