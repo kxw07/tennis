@@ -32,7 +32,10 @@ public class Tennis {
 
             if (a > 3) {
                 return "A Wins";
+            } else if (b > 3) {
+                return "B Wins";
             }
+
             return scoreLookUp(a) + " " + scoreLookUp(b);
         }
     }
