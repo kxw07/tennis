@@ -16,11 +16,7 @@ public class Tennis {
 
     public String score() {
         if (a == b) {
-            if (a >= 3) {
-                return "Deuce";
-            } else {
-                return scoreLookUp(a) + " All";
-            }
+            return getSameScore();
         } else {
             if (Math.abs(a - b) == 1) {
                 if (a > 3 ){
@@ -50,6 +46,14 @@ public class Tennis {
 
     public String scoreLookUp(int score) {
         return scoreMap.get(score);
+    }
+
+    public String getSameScore() {
+        if (a >= 3) {
+            return "Deuce";
+        } else {
+            return scoreLookUp(a) + " All";
+        }
     }
 
 }
