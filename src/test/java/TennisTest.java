@@ -11,7 +11,7 @@ public class TennisTest {
     }
 
     @Test
-    public void game_start_then_love_all() {
+    public void when_game_start_then_love_all() {
         Assert.assertEquals(tennis.score(), "Love All");
     }
 
