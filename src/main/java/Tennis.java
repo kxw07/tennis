@@ -19,11 +19,7 @@ public class Tennis {
             return getSameScore();
         } else {
             if ((a > 3 || b > 3)) {
-                if (Math.abs(a - b) == 1) {
-                    return getWhoAdvantage();
-                } else {
-                    return getWhoWins();
-                }
+                return Math.abs(a - b) == 1 ? getWhoAdvantage() : getWhoWins();
             }
 
             return scoreLookUp(a) + " " + scoreLookUp(b);
@@ -51,7 +47,7 @@ public class Tennis {
     }
 
     public String getWhoAdvantage() {
-        if (a > 3 ){
+        if (a > 3) {
             return "A Advantage";
         } else {
             return "B Advantage";
