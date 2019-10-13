@@ -22,8 +22,12 @@ public class Tennis {
                 return scoreLookUp(a) + " All";
             }
         } else {
-            if (a > 3 && Math.abs(a - b) == 1) {
-                return "A Advantage";
+            if (Math.abs(a - b) == 1) {
+                if (a > 3 ){
+                    return "A Advantage";
+                } else if (b > 3) {
+                    return "B Advantage";
+                }
             }
             return scoreLookUp(a) + " " + scoreLookUp(b);
         }
