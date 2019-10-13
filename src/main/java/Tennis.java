@@ -4,6 +4,15 @@ import java.util.Map;
 public class Tennis {
     int a = 0;
     int b = 0;
+    private Map<Integer, String> scoreMap;
+
+    public Tennis() {
+        scoreMap = new HashMap<Integer, String>();
+        scoreMap.put(0, "Love");
+        scoreMap.put(1, "Fifteen");
+        scoreMap.put(2, "Thirty");
+        scoreMap.put(3, "Forty");
+    }
 
     public String score() {
         if (a == b) {
@@ -22,12 +31,6 @@ public class Tennis {
     }
 
     public String scoreLookUp(int score) {
-        Map<Integer, String> scoreMap = new HashMap<Integer, String>();
-        scoreMap.put(0, "Love");
-        scoreMap.put(1, "Fifteen");
-        scoreMap.put(2, "Thirty");
-        scoreMap.put(3, "Forty");
-
         return scoreMap.get(score);
     }
 
