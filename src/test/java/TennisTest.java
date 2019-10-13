@@ -40,13 +40,13 @@ public class TennisTest {
     }
 
     @Test
-    public void when_b_score_two_times_then_love_fifteen() {
+    public void when_b_score_two_times_then_love_thirty() {
         bScoreMultiTimes(2);
         Assert.assertEquals(tennis.score(), "Love Thirty");
     }
 
     @Test
-    public void when_b_score_three_times_then_love_fifteen() {
+    public void when_b_score_three_times_then_love_forty() {
         bScoreMultiTimes(3);
         Assert.assertEquals(tennis.score(), "Love Forty");
     }
