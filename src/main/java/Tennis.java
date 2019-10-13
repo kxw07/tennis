@@ -6,6 +6,10 @@ public class Tennis {
     int b = 0;
 
     public String score() {
+        if (a == b) {
+            return scoreLookUp(a) + " All";
+        }
+
         if (a > 0) {
             return scoreLookUp(a) + " Love";
         }
