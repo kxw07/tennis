@@ -6,9 +6,9 @@ public class Tennis {
 
     public String score() {
         if (a == 1) {
-            return "Fifteen Love";
+            return scoreLookUp(a) + " Love";
         } else if (a == 2) {
-            return "Thirty Love";
+            return scoreLookUp(a) + " Love";
         }
 
         return "Love All";
@@ -18,7 +18,7 @@ public class Tennis {
         a++;
     }
 
-    public String scroeLookUp(int score) {
+    public String scoreLookUp(int score) {
         Map<Integer, String> scoreMap = new HashMap<Integer, String>();
         scoreMap.put(0, "Love");
         scoreMap.put(1, "Fifteen");
