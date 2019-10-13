@@ -16,19 +16,19 @@ public class TennisTest {
     }
 
     @Test
-    public void when_a_score_one_then_fifteen_love() {
+    public void when_a_score_one_times_then_fifteen_love() {
         aScoreMultiTimes(1);
         Assert.assertEquals(tennis.score(), "Fifteen Love");
     }
 
     @Test
-    public void when_a_score_two_then_thirty_love() {
+    public void when_a_score_two_times_then_thirty_love() {
         aScoreMultiTimes(2);
         Assert.assertEquals(tennis.score(), "Thirty Love");
     }
 
     @Test
-    public void when_a_score_three_then_forty_love() {
+    public void when_a_score_three_times_then_forty_love() {
         aScoreMultiTimes(3);
         Assert.assertEquals(tennis.score(), "Forty Love");
     }
