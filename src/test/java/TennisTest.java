@@ -108,10 +108,17 @@ public class TennisTest {
     }
 
     @Test
-    public void when_score_three_times_b_score_one_times_then_Forty_fifteen() {
+    public void when_a_score_three_times_b_score_one_times_then_Forty_fifteen() {
         aScoreMultiTimes(3);
         bScoreMultiTimes(1);
         Assert.assertEquals("Forty Fifteen", tennis.score());
+    }
+
+    @Test
+    public void when_a_score_four_times_b_score_one_times_then_a_wins() {
+        aScoreMultiTimes(4);
+        bScoreMultiTimes(1);
+        Assert.assertEquals("A Wins", tennis.score());
     }
 
 
