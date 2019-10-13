@@ -121,6 +121,13 @@ public class TennisTest {
         Assert.assertEquals("A Wins", tennis.score());
     }
 
+    @Test
+    public void when_a_score_one_times_b_score_four_times_then_b_wins() {
+        aScoreMultiTimes(1);
+        bScoreMultiTimes(4);
+        Assert.assertEquals("B Wins", tennis.score());
+    }
+
 
     public void aScoreMultiTimes(int times) {
         for (int idx = 0; idx < times; idx++) {
