@@ -45,6 +45,12 @@ public class TennisTest {
         Assert.assertEquals(tennis.score(), "Love Thirty");
     }
 
+    @Test
+    public void when_b_score_three_times_then_love_fifteen() {
+        bScoreMultiTimes(3);
+        Assert.assertEquals(tennis.score(), "Love Forty");
+    }
+
     public void aScoreMultiTimes(int times) {
         for (int idx = 0; idx < times; idx++) {
             tennis.aScore();
