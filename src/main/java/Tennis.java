@@ -18,10 +18,10 @@ public class Tennis {
         if (a == b) {
             return getSameScore();
         } else {
-            if (Math.abs(a - b) == 1) {
+            if ((a > 3 || b > 3) && Math.abs(a - b) == 1) {
                 if (a > 3 ){
                     return "A Advantage";
-                } else if (b > 3) {
+                } else {
                     return "B Advantage";
                 }
             }
