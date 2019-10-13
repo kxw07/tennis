@@ -35,20 +35,25 @@ public class TennisTest {
 
     @Test
     public void when_b_score_one_times_then_love_fifteen() {
-        tennis.bScore();
+        bScoreMultiTimes(1);
         Assert.assertEquals(tennis.score(), "Love Fifteen");
     }
 
     @Test
     public void when_b_score_two_times_then_love_fifteen() {
-        tennis.bScore();
-        tennis.bScore();
+        bScoreMultiTimes(2);
         Assert.assertEquals(tennis.score(), "Love Thirty");
     }
 
     public void aScoreMultiTimes(int times) {
         for (int idx = 0; idx < times; idx++) {
             tennis.aScore();
+        }
+    }
+
+    public void bScoreMultiTimes(int times) {
+        for (int idx = 0; idx < times; idx++) {
+            tennis.bScore();
         }
     }
 }
