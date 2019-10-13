@@ -16,7 +16,11 @@ public class Tennis {
 
     public String score() {
         if (a == b) {
-            return scoreLookUp(a) + " All";
+            if (a >= 3) {
+                return "Deuce";
+            } else {
+                return scoreLookUp(a) + " All";
+            }
         } else {
             return scoreLookUp(a) + " " + scoreLookUp(b);
         }
