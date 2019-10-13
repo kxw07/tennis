@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Tennis {
     int a = 0;
 
@@ -13,5 +16,14 @@ public class Tennis {
 
     public void aScore() {
         a++;
+    }
+
+    public String scroeLookUp(int score) {
+        Map<Integer, String> scoreMap = new HashMap<Integer, String>();
+        scoreMap.put(0, "Love");
+        scoreMap.put(1, "Fifteen");
+        scoreMap.put(2, "Thirty");
+
+        return scoreMap.get(score);
     }
 }
