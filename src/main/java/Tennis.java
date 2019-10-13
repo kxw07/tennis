@@ -8,17 +8,9 @@ public class Tennis {
     public String score() {
         if (a == b) {
             return scoreLookUp(a) + " All";
+        } else {
+            return scoreLookUp(a) + " " + scoreLookUp(b);
         }
-
-        if (a > 0) {
-            return scoreLookUp(a) + " Love";
-        }
-
-        if (b > 0) {
-            return "Love " + scoreLookUp(b);
-        }
-
-        return "Love All";
     }
 
     public void aScore() {
