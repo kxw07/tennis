@@ -12,78 +12,78 @@ public class TennisTest {
 
     @Test
     public void when_game_start_then_love_all() {
-        Assert.assertEquals(tennis.score(), "Love All");
+        Assert.assertEquals("Love All", tennis.score());
     }
 
     @Test
     public void when_a_score_one_times_then_fifteen_love() {
         aScoreMultiTimes(1);
-        Assert.assertEquals(tennis.score(), "Fifteen Love");
+        Assert.assertEquals("Fifteen Love", tennis.score());
     }
 
     @Test
     public void when_a_score_two_times_then_thirty_love() {
         aScoreMultiTimes(2);
-        Assert.assertEquals(tennis.score(), "Thirty Love");
+        Assert.assertEquals("Thirty Love", tennis.score());
     }
 
     @Test
     public void when_a_score_three_times_then_forty_love() {
         aScoreMultiTimes(3);
-        Assert.assertEquals(tennis.score(), "Forty Love");
+        Assert.assertEquals("Forty Love", tennis.score());
     }
 
     @Test
     public void when_b_score_one_times_then_love_fifteen() {
         bScoreMultiTimes(1);
-        Assert.assertEquals(tennis.score(), "Love Fifteen");
+        Assert.assertEquals("Love Fifteen", tennis.score());
     }
 
     @Test
     public void when_b_score_two_times_then_love_thirty() {
         bScoreMultiTimes(2);
-        Assert.assertEquals(tennis.score(), "Love Thirty");
+        Assert.assertEquals("Love Thirty", tennis.score());
     }
 
     @Test
     public void when_b_score_three_times_then_love_forty() {
         bScoreMultiTimes(3);
-        Assert.assertEquals(tennis.score(), "Love Forty");
+        Assert.assertEquals("Love Forty", tennis.score());
     }
 
     @Test
     public void when_a_score_one_time_b_score_one_times_then_fifteen_all () {
         aScoreMultiTimes(1);
         bScoreMultiTimes(1);
-        Assert.assertEquals(tennis.score(), "Fifteen All");
+        Assert.assertEquals("Fifteen All", tennis.score());
     }
 
     @Test
     public void when_a_score_two_time_b_score_two_times_then_thirty_all () {
         aScoreMultiTimes(2);
         bScoreMultiTimes(2);
-        Assert.assertEquals(tennis.score(), "Thirty All");
+        Assert.assertEquals("Thirty All", tennis.score());
     }
 
     @Test
     public void when_a_score_three_time_b_score_three_times_then_deuce () {
         aScoreMultiTimes(3);
         bScoreMultiTimes(3);
-        Assert.assertEquals(tennis.score(), "Deuce");
+        Assert.assertEquals("Deuce", tennis.score());
     }
 
     @Test
     public void when_a_score_four_times_b_score_three_times_then_a_advantage() {
         aScoreMultiTimes(4);
         bScoreMultiTimes(3);
-        Assert.assertEquals(tennis.score(), "A Advantage");
+        Assert.assertEquals("A Advantage", tennis.score());
     }
 
     @Test
     public void when_a_score_three_times_b_score_four_times_then_a_advantage() {
         aScoreMultiTimes(3);
         bScoreMultiTimes(4);
-        Assert.assertEquals(tennis.score(), "B Advantage");
+        Assert.assertEquals("B Advantage", tennis.score());
     }
 
     public void aScoreMultiTimes(int times) {
