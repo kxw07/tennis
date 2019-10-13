@@ -18,18 +18,12 @@ public class Tennis {
         if (a == b) {
             return getSameScore();
         } else {
-            if ((a > 3 || b > 3) && Math.abs(a - b) == 1) {
-                if (a > 3 ){
-                    return "A Advantage";
+            if ((a > 3 || b > 3)) {
+                if (Math.abs(a - b) == 1) {
+                    return getWhoAdvantage();
                 } else {
-                    return "B Advantage";
+                    return getWhoWins();
                 }
-            }
-
-            if (a > 3) {
-                return "A Wins";
-            } else if (b > 3) {
-                return "B Wins";
             }
 
             return scoreLookUp(a) + " " + scoreLookUp(b);
@@ -56,4 +50,19 @@ public class Tennis {
         }
     }
 
+    public String getWhoAdvantage() {
+        if (a > 3 ){
+            return "A Advantage";
+        } else {
+            return "B Advantage";
+        }
+    }
+
+    public String getWhoWins() {
+        if (a > 3) {
+            return "A Wins";
+        } else {
+            return "B Wins";
+        }
+    }
 }
