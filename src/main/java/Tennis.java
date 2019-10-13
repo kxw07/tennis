@@ -5,9 +5,7 @@ public class Tennis {
     int a = 0;
 
     public String score() {
-        if (a == 1) {
-            return scoreLookUp(a) + " Love";
-        } else if (a == 2) {
+        if (a > 0) {
             return scoreLookUp(a) + " Love";
         }
 
