@@ -52,24 +52,31 @@ public class TennisTest {
     }
 
     @Test
-    public void give_A_score_one_B_score_one_when_getScores_then_fifteen_all () {
+    public void given_A_score_one_B_score_one_when_getScores_then_fifteen_all () {
         aScores(1);
         bScores(1);
         Assert.assertEquals(tennis.getScores(), "fifteen all");
     }
 
     @Test
-    public void give_A_score_two_B_score_two_when_getScores_then_thirty_all () {
+    public void given_A_score_two_B_score_two_when_getScores_then_thirty_all () {
         aScores(2);
         bScores(2);
         Assert.assertEquals(tennis.getScores(), "thirty all");
     }
 
     @Test
-    public void give_A_score_one_B_score_two_when_getScores_then_fifteen_thirty () {
+    public void given_A_score_one_B_score_two_when_getScores_then_fifteen_thirty () {
         aScores(1);
         bScores(2);
         Assert.assertEquals(tennis.getScores(), "fifteen thirty");
+    }
+
+    @Test
+    public void given_A_score_three_B_score_three_when_getScores_then_deuce () {
+        aScores(3);
+        bScores(3);
+        Assert.assertEquals(tennis.getScores(), "deuce");
     }
 
     public void aScores(int times) {
