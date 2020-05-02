@@ -16,6 +16,10 @@ public class Tennis {
 
     public String getScores() {
         if (a_score != b_score) {
+            if (a_score == 4 && b_score == 3) {
+                return "advantage a";
+            }
+
             return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
         } else {
             if (a_score == 3) {
