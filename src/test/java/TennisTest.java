@@ -27,6 +27,12 @@ public class TennisTest {
         Assert.assertEquals(tennis.getScores(), "thirty love");
     }
 
+    @Test
+    public void given_A_score_three_when_getScores_then_forty_love () {
+        aScores(3);
+        Assert.assertEquals(tennis.getScores(), "forty love");
+    }
+
     public void aScores(int times) {
         for (int i=0; i<times; i++) {
             tennis.aScore();
