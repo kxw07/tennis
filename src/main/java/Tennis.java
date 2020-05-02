@@ -4,6 +4,8 @@ public class Tennis {
     public String getScores() {
         if (a_score == 1) {
             return "fifteen love";
+        } else if (a_score == 2) {
+            return "thirty love";
         }
 
         return "love all";
