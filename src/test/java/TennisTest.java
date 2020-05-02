@@ -113,6 +113,12 @@ public class TennisTest {
         Assert.assertEquals(tennis.getScores(), "win a");
     }
 
+    @Test
+    public void given_B_score_four_when_getScores_then_win_b () {
+        bScores(4);
+        Assert.assertEquals(tennis.getScores(), "win b");
+    }
+
     public void aScores(int times) {
         for (int i=0; i<times; i++) {
             tennis.aScore();
