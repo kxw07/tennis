@@ -17,11 +17,7 @@ public class Tennis {
     public String getScores() {
         if (a_score != b_score) {
             if (a_score >= 4 || b_score >= 4) {
-                if (Math.abs(a_score - b_score) == 1) {
-                    return getWhoAdvantage();
-                }
-
-                return getWhoWinner();
+                return Math.abs(a_score - b_score) == 1?getWhoAdvantage():getWhoWinner();
             }
 
             return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
