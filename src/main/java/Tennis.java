@@ -1,5 +1,5 @@
 public class Tennis {
     public String getScores() {
-        return "Zero Love";
+        return "love all";
     }
 }
