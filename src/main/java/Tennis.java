@@ -30,11 +30,7 @@ public class Tennis {
 
             return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
         } else {
-            if (a_score == 3) {
-                return "deuce";
-            } else {
-                return scoreMap.get(a_score) + " " + "all";
-            }
+            return a_score == 3?"deuce":scoreMap.get(a_score) + " " + "all";
         }
     }
 
