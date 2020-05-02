@@ -18,14 +18,14 @@ public class Tennis {
         if (a_score != b_score) {
             if (a_score >= 3 && b_score >= 3) {
                 if (a_score > 4 || b_score > 4) {
-                    return a_score > b_score ? "win a":"win b";
+                    return getWinner();
                 }
 
                 return a_score > b_score? "advantage a":"advantage b";
             }
 
             if (a_score == 4 || b_score == 4) {
-                return a_score > b_score ? "win a":"win b";
+                return getWinner();
             }
 
             return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
@@ -36,6 +36,10 @@ public class Tennis {
                 return scoreMap.get(a_score) + " " + "all";
             }
         }
+    }
+
+    public String getWinner() {
+        return a_score > b_score ? "win a":"win b";
     }
 
     public void aScore() {
