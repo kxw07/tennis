@@ -10,6 +10,8 @@ public class TennisTest {
 
     @Test
     public void given_A_score_one_when_getScores_then_fifteen_love () {
-
+        Tennis tennis = new Tennis();
+        tennis.aScore();
+        Assert.assertEquals(tennis.getScores(), "fifteen love");
     }
 }
