@@ -15,11 +15,11 @@ public class Tennis {
     }
 
     public String getScores() {
-        if (a_score > 0 || b_score > 0) {
+        if ((a_score > 0 || b_score > 0) && a_score != b_score) {
             return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
+        } else {
+            return scoreMap.get(a_score) + " " + "all";
         }
-
-        return "love all";
     }
 
     public void aScore() {
