@@ -17,6 +17,10 @@ public class Tennis {
     public String getScores() {
         if (a_score != b_score) {
             if (a_score >= 3 && b_score >= 3) {
+                if (a_score > 4 || b_score > 4) {
+                    return a_score > b_score ? "win a":"win b";
+                }
+
                 return a_score > b_score? "advantage a":"advantage b";
             }
 
