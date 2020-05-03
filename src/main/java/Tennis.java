@@ -35,10 +35,26 @@ public class Tennis {
     }
 
     public void aScore() {
-        a_score++;
+        if ((a_score >= 3 && b_score >= 3) && a_score != b_score) {
+            if (a_score > b_score) {
+                a_score++;
+            } else {
+                b_score--;
+            }
+        } else {
+            a_score++;
+        }
     }
 
     public void bScore() {
-        b_score++;
+        if ((a_score >= 3 && b_score >= 3) && a_score != b_score) {
+            if (a_score > b_score) {
+                a_score--;
+            } else {
+                b_score++;
+            }
+        } else {
+            b_score++;
+        }
     }
 }
