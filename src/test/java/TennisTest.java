@@ -105,6 +105,15 @@ public class TennisTest {
         Assert.assertEquals(tennis.getScores(), "win b");
     }
 
+    @Test
+    public void given_deuce_when_a_score_and_b_score_then_return_deuce () {
+        aScoreTimes(3);
+        bScoreTimes(3);
+        aScoreTimes(1);
+        bScoreTimes(1);
+        Assert.assertEquals(tennis.getScores(), "deuce");
+    }
+
     public void aScoreTimes(int times) {
         for (int i = 0; i < times; i++) {
             tennis.aScore();
