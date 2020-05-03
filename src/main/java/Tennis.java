@@ -30,6 +30,10 @@ public class Tennis {
                 }
             }
 
+            if (a_score == 4 || b_score ==4) {
+                return a_score > b_score ? "win a":"win b";
+            }
+
             return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
         }
     }
