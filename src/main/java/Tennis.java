@@ -4,6 +4,7 @@ import java.util.Map;
 public class Tennis {
 
     private int a_score = 0;
+    private int b_score = 0;
     private Map scoreMap;
 
     public Tennis () {
@@ -24,5 +25,9 @@ public class Tennis {
 
     public void aScore() {
         a_score++;
+    }
+
+    public void bScore() {
+        b_score++;
     }
 }
