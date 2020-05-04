@@ -13,7 +13,7 @@ public class TennisTest {
 
     @Test
     public void given_init_game_then_return_love_all() {
-        Assert.assertEquals(tennis.getScores(),  "love all");
+        Assert.assertEquals(tennis.getScores(), "love all");
     }
 
     @Test
@@ -46,6 +46,14 @@ public class TennisTest {
         aScoresTimes(3);
         bScoresTimes(3);
         Assert.assertEquals(tennis.getScores(), "deuce");
+    }
+
+    @Test
+    public void given_deuce_when_a_scores_one_then_return_advantage_a() {
+        aScoresTimes(3);
+        bScoresTimes(3);
+        aScoresTimes(1);
+        Assert.assertEquals(tennis.getScores(), "advantage a");
     }
 
     public void aScoresTimes(int times) {
