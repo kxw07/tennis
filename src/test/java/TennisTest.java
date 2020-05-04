@@ -29,6 +29,13 @@ public class TennisTest {
     }
 
     @Test
+    public void given_a_and_b_score_one_then_return_fifteen_all() {
+        tennis.aScores();
+        tennis.bScores();
+        Assert.assertEquals(tennis.getScores(), "fifteen all");
+    }
+
+    @Test
     public void given_a_score_two_then_return_thirty_love() {
         tennis.aScores();
         tennis.aScores();
