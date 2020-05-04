@@ -21,4 +21,11 @@ public class TennisTest {
         tennis.aScores();
         Assert.assertEquals(tennis.getScores(), "fifteen love");
     }
+
+    @Test
+    public void given_a_score_two_then_return_thirty_love() {
+        tennis.aScores();
+        tennis.aScores();
+        Assert.assertEquals(tennis.getScores(), "thirty love");
+    }
 }
