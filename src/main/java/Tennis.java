@@ -20,8 +20,9 @@ public class Tennis {
         if (a_score == b_score) {
             if (a_score == 3) {
                 return "deuce";
+            } else {
+                return scoreMap.get(a_score) + " all";
             }
-            return scoreMap.get(a_score) + " all";
         } else {
             return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
         }
