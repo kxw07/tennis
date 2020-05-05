@@ -18,6 +18,9 @@ public class Tennis {
 
     public String getScores() {
         if (a_score == b_score) {
+            if (a_score == 3) {
+                return "deuce";
+            }
             return scoreMap.get(a_score) + " all";
         }
 
