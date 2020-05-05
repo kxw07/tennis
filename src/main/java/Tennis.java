@@ -22,13 +22,9 @@ public class Tennis {
                 return "deuce";
             }
             return scoreMap.get(a_score) + " all";
-        }
-
-        if (a_score > 0 || b_score > 0) {
+        } else {
             return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
         }
-
-        return "love all";
     }
 
     public void aScores() {
