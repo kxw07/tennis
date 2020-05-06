@@ -18,20 +18,31 @@ public class TennisTest {
 
     @Test
     public void given_a_scores_one_then_return_fifteen_love () {
-        tennis.aScores();
+        aScoresTimes(1);
         Assert.assertEquals(tennis.getScores(), "fifteen love");
     }
 
     @Test
     public void given_a_scores_two_then_return_thiry_love () {
-        tennis.aScores();
-        tennis.aScores();
+        aScoresTimes(2);
         Assert.assertEquals(tennis.getScores(), "thirty love");
     }
 
     @Test
     public void given_b_scores_one_then_return_love_fifteen () {
-        tennis.bScores();
+        bScoresTimes(1);
         Assert.assertEquals(tennis.getScores(), "love fifteen");
+    }
+
+    public void aScoresTimes(int times) {
+        for (int i = 0; i < times; i++) {
+            tennis.aScores();
+        }
+    }
+
+    public void bScoresTimes(int times) {
+        for (int i = 0; i < times; i++) {
+            tennis.bScores();
+        }
     }
 }
