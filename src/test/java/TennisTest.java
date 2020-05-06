@@ -22,4 +22,11 @@ public class TennisTest {
         tennis.aScores();
         Assert.assertEquals(tennis.getScores(), "thirty love");
     }
+
+    @Test
+    public void given_b_scores_one_then_return_love_fifteen () {
+        Tennis tennis = new Tennis();
+        tennis.bScores();
+        Assert.assertEquals(tennis.getScores(), "love fifteen");
+    }
 }
