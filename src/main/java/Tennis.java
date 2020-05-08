@@ -35,28 +35,16 @@ public class Tennis {
     }
 
     public void aScores() {
-        if (a_score > 3 || b_score > 3) {
-            if (Math.abs(a_score - b_score) == 1) {
-                if (a_score > b_score) {
-                    a_score++;
-                } else {
-                    b_score--;
-                }
-            }
+        if ((a_score > 3 || b_score > 3) && (Math.abs(a_score - b_score) == 1 && (a_score < b_score))) {
+            b_score--;
         } else {
             a_score++;
         }
     }
 
     public void bScores() {
-        if (a_score > 3 || b_score > 3) {
-            if (Math.abs(a_score - b_score) == 1) {
-                if (a_score > b_score) {
-                    a_score--;
-                } else {
-                    b_score++;
-                }
-            }
+        if ((a_score > 3 || b_score > 3) && (Math.abs(a_score - b_score) == 1 && (a_score > b_score))) {
+            a_score--;
         } else {
             b_score++;
         }
