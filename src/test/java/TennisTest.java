@@ -7,4 +7,11 @@ public class TennisTest {
         Tennis tennis = new Tennis();
         Assert.assertEquals("love all", tennis.getScores());
     }
+
+    @Test
+    public void given_a_scores_one_then_return_fifteen_love () {
+        Tennis tennis = new Tennis();
+        tennis.aScores();
+        Assert.assertEquals("fifteen all", tennis.getScores());
+    }
 }
