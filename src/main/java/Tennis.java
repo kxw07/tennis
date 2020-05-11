@@ -22,7 +22,11 @@ public class Tennis {
                 return scoreMap.get(a_score) + " all";
             }
         } else {
-            return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
+            if (a_score >= 3 && b_score >= 3) {
+                return a_score > b_score ? "advantage a" : "advantage b";
+            } else {
+                return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
+            }
         }
     }
 
