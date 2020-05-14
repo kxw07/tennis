@@ -23,7 +23,7 @@ public class Tennis {
             }
         } else {
             if (a_score > 3 || b_score > 3) {
-                if (Math.abs(a_score - b_score) == 1) {
+                if (isAdvantage()) {
                     return a_score > b_score ? "advantage a" : "advantage b";
                 } else {
                     return a_score > b_score ? "win a" : "win b";
@@ -32,6 +32,10 @@ public class Tennis {
                 return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
             }
         }
+    }
+
+    public boolean isAdvantage() {
+        return Math.abs(a_score - b_score) == 1;
     }
 
     public void aScores() {
