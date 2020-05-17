@@ -65,6 +65,12 @@ public class TennisTest {
         Assert.assertEquals("win a", tennis.getScore());
     }
 
+    @Test
+    public void given_a_scores_four_then_return_win_a() {
+        aScoresTimes(4);
+        Assert.assertEquals("win a", tennis.getScore());
+    }
+
     private void bScoresTimes(int times) {
         for (int i = 0; i < times; i++) {
             tennis.bScores();
