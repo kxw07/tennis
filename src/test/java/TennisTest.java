@@ -18,14 +18,19 @@ public class TennisTest {
 
     @Test
     public void given_a_scores_one_then_return_fifteen_all() {
-        tennis.aScores();
+        aScoresTimes(1);
         Assert.assertEquals("fifteen love", tennis.getScore());
     }
 
     @Test
     public void given_a_scores_two_then_return_thirty_love() {
-        tennis.aScores();
-        tennis.aScores();
+        aScoresTimes(2);
         Assert.assertEquals("thirty love", tennis.getScore());
+    }
+
+    private void aScoresTimes(int times) {
+        for (int i = 0; i < times; i++) {
+            tennis.aScores();
+        }
     }
 }
