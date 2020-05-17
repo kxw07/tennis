@@ -24,4 +24,7 @@ public class Tennis {
     public void aScores() {
         a_score++;
     }
+
+    public void bScores() {
+    }
 }
