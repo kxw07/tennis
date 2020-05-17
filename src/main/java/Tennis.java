@@ -3,6 +3,7 @@ import java.util.Map;
 
 public class Tennis {
     private int a_score = 0;
+    private int b_score = 0;
     private final Map scoreMap;
 
     public Tennis() {
@@ -14,8 +15,8 @@ public class Tennis {
     }
 
     public String getScore() {
-        if (a_score > 0) {
-            return scoreMap.get(a_score) + " love";
+        if (a_score > 0 || b_score > 0) {
+            return scoreMap.get(a_score) + " " + scoreMap.get(b_score);
         } else {
             return "love all";
         }
@@ -26,5 +27,6 @@ public class Tennis {
     }
 
     public void bScores() {
+        b_score++;
     }
 }
