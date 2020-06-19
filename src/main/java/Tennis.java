@@ -24,7 +24,11 @@ public class Tennis {
             }
         } else {
             if (aScore >= 3 && bScore >= 3) {
-                return aScore > bScore ? "advantage a" : "advantage b";
+                if (Math.abs(aScore - bScore) == 1) {
+                    return aScore > bScore ? "advantage a" : "advantage b";
+                } else {
+                    return aScore > bScore ? "win a" : "win b";
+                }
             }
             return scoresMap.get(aScore) + " " + scoresMap.get(bScore);
         }
