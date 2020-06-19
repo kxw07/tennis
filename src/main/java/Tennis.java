@@ -24,9 +24,9 @@ public class Tennis {
         } else {
             if (aScore >= 3 && bScore >= 3) {
                 if (Math.abs(aScore - bScore) == 1) {
-                    return aScore > bScore?"advantage a":"advantage b";
+                    return aScore > bScore ? "advantage a" : "advantage b";
                 } else {
-                    return aScore > bScore?"win a":"win b";
+                    return aScore > bScore ? "win a" : "win b";
                 }
             }
             return scoresMap.get(aScore) + " " + scoresMap.get(bScore);
@@ -34,10 +34,18 @@ public class Tennis {
     }
 
     public void aScores() {
-        aScore++;
+        if (aScore == 3 && bScore == 4) {
+            bScore--;
+        } else {
+            aScore++;
+        }
     }
 
     public void bScores() {
-        bScore++;
+        if (aScore == 4 && bScore == 3) {
+            aScore--;
+        } else {
+            bScore++;
+        }
     }
 }
