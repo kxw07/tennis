@@ -39,6 +39,10 @@ public class Tennis {
     }
 
     public void bScores() {
-        bScore++;
+        if (aScore == 4 && bScore == 3) {
+            aScore--;
+        } else {
+            bScore++;
+        }
     }
 }
