@@ -16,8 +16,8 @@ public class Tennis {
     }
 
     public String getScores() {
-        if (aScore > 0) {
-            return scoresMap.get(aScore) + " love";
+        if (aScore > 0 || bScore > 0) {
+            return scoresMap.get(aScore) + " " + scoresMap.get(bScore);
         }
         return "love all";
     }
