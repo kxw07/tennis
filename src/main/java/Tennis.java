@@ -5,6 +5,7 @@ public class Tennis {
 
     private int aScore = 0;
     private Map scoresMap;
+    private int bScore = 0;
 
     public Tennis() {
         scoresMap = new HashMap();
@@ -23,5 +24,9 @@ public class Tennis {
 
     public void aScores() {
         aScore++;
+    }
+
+    public void bScores() {
+        bScore++;
     }
 }
