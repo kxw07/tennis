@@ -49,6 +49,14 @@ public class TennisTest {
         Assert.assertEquals("deuce", tennis.getScores());
     }
 
+    @Test
+    public void given_deuce_when_a_scores_one_then_return_advantage_a() {
+        aScores(3);
+        bScores(3);
+        aScores(1);
+        Assert.assertEquals("advantage a", tennis.getScores());
+    }
+
     private void aScores(int times) {
         for (int i = 0; i < times; i++) {
             tennis.aScores();
