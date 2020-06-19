@@ -1,6 +1,7 @@
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import sun.tools.tree.AssignShiftLeftExpression;
 
 public class TennisTest {
 
@@ -32,6 +33,13 @@ public class TennisTest {
     public void given_b_scores_one_then_return_love_fifteen() {
         bScores(1);
         Assert.assertEquals("love fifteen", tennis.getScores());
+    }
+
+    @Test
+    public void given_a_and_b_scores_one_then_return_fifteen_all() {
+        aScores(1);
+        bScores(1);
+        Assert.assertEquals("fifteen all", tennis.getScores());
     }
 
     private void aScores(int times) {
