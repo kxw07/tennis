@@ -35,10 +35,17 @@ public class TennisTest {
     }
 
     @Test
-    public void given_a_and_b_score_one_then_return_fifteen_all() {
+    public void given_a_and_b_scores_one_then_return_fifteen_all() {
         aScoresTimes(1);
         bScoresTimes(1);
         Assert.assertEquals("fifteen all", tennis.getScores());
+    }
+
+    @Test
+    public void given_a_and_b_scores_three_then_return_deuce() {
+        aScoresTimes(3);
+        bScoresTimes(3);
+        Assert.assertEquals("deuce", tennis.getScores());
     }
 
     private void aScoresTimes(int times) {
